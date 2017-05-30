@@ -745,7 +745,7 @@ public final class Camera2Manager extends BaseCameraManager<String, TextureView.
                     uiHandler.post(new Runnable() {
                         @Override
                         public void run() {
-                            cameraPhotoListener.onPhotoTaken(bytes, outputPath, callback);
+                            callback.onPhotoTaken(bytes, outputPath.getPath());
                             callback = null;
                         }
                     });
